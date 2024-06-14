@@ -15,7 +15,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
       objectsArray.forEach((singleObj) => {
         const card = document.createElement("div");
-        card.className = "col-4 card";
+        card.className = "col card m-1 ";
 
         const imgCard = document.createElement("img");
         imgCard.className = "card-img-top";
