@@ -11,9 +11,9 @@ window.addEventListener("DOMContentLoaded", () => {
       }
     })
     .then((objectsArray) => {
-      objectsArray.forEach((singleObj) => {
-        const row = document.getElementById("row");
+      const row = document.getElementById("row");
 
+      objectsArray.forEach((singleObj) => {
         const card = document.createElement("div");
         card.className = "col-4 card";
 
@@ -35,15 +35,16 @@ window.addEventListener("DOMContentLoaded", () => {
         brand.className = "btn btn-primary";
 
         const cardPrice = document.createElement("p");
-        cardPrice.innerText = singleObj.name;
+        cardPrice.innerText = singleObj.price;
         cardPrice.className = "card-Price";
 
-        card.append("price");
-        card.append("brand");
-        card.append("cardDescription");
-        card.append("cardTitle");
-        card.append("imgCard");
-        row.append("card");
+        card.appendChild(imgCard);
+        card.appendChild(cardTitle);
+        card.appendChild(brand);
+        card.appendChild(cardDescription);
+        card.appendChild(cardPrice);
+
+        row.appendChild(card);
       });
     })
     .catch((err) => console.log(err));
