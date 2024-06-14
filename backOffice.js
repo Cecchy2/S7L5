@@ -82,26 +82,48 @@ const formFunct = (event) => {
       }
     })
     .then((createObject) => {
-      console.log("Object created/updated successfully", createObject);
-      // Optional: redirect or clear form
+      alert("la Modifica e' avvenuta con successo!!!", createObject);
+
+      document.getElementById("name").value = "";
+      document.getElementById("description").value = "";
+      document.getElementById("brand").value = "";
+      document.getElementById("imageUrl").value = "";
+      document.getElementById("price").value = "";
+
+      window.location.href = "./index.html";
     })
     .catch((err) => console.log(err));
 };
 
 const deleteProduct = () => {
-  fetch(URL, {
-    method: "DELETE",
-    headers: {
-      Authorization: authorization,
-    },
-  })
-    .then((resp) => {
-      if (resp.ok) {
-        console.log("PRODOTTO ELIMINATO");
-        // Optional: redirect or notify user
-      } else {
-        throw new Error("ERRORE NELLA CANCELLAZIONE");
-      }
+  const confermato = confirm("Sei sicuro di volere eliminare l'oggetto?");
+  if (confermato) {
+    fetch(URL, {
+      method: "DELETE",
+      headers: {
+        Authorization: authorization,
+      },
     })
-    .catch((err) => console.log(err));
+      .then((resp) => {
+        if (resp.ok) {
+          alert("PRODOTTO ELIMINATO");
+
+          document.getElementById("name").value = "";
+          document.getElementById("description").value = "";
+          document.getElementById("brand").value = "";
+          document.getElementById("imageUrl").value = "";
+          document.getElementById("price").value = "";
+
+          window.location.href = "./index.html";
+
+          const card = document.querySelector(".card");
+          if (card) {
+            card.remove();
+          }
+        } else {
+          throw new Error("ERRORE NELLA CANCELLAZIONE");
+        }
+      })
+      .catch((err) => console.log(err));
+  }
 };
