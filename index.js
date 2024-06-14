@@ -39,7 +39,7 @@ window.addEventListener("DOMContentLoaded", () => {
         cardPrice.className = "card-Price";
 
         const details = document.createElement("a");
-        details.href = "./details.html";
+        details.href = `./details.html?objectId=${singleObj._id}`;
         details.innerText = "Details";
         details.className = "btn btn-secondary";
 

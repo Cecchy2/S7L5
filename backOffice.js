@@ -1,3 +1,5 @@
+const id = new URLSearchParams(window.location.search).get("objectId");
+
 const authorization =
   "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjZiZjlhOTdjMjM5YzAwMTUyZjRiM2QiLCJpYXQiOjE3MTgzNTIyOTgsImV4cCI6MTcxOTU2MTg5OH0.y7gHg1PKQ4OQXp0Hab01t6w5m7V4aSUl2Lau-YghrEo";
 
@@ -26,11 +28,16 @@ const formFunct = (event) => {
 
       Authorization: authorization,
     },
-  }).then((resp) => {
-    if (resp.ok) {
-      return resp.json();
-    } else {
-      throw new Error("ERRORE NELLA CREAZIONE DELL'OGGETTO");
-    }
-  });
+  })
+    .then((resp) => {
+      if (resp.ok) {
+        return resp.json();
+      } else {
+        throw new Error("ERRORE NELLA CREAZIONE DELL'OGGETTO");
+      }
+    })
+    .then((createObject) => {})
+    .catch((err) => console.log(err));
+
+  console.log(createObject);
 };
