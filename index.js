@@ -15,7 +15,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
       objectsArray.forEach((singleObj) => {
         const card = document.createElement("div");
-        card.className = "col card m-1 ";
+        card.className = "col card m-1 d-flex";
 
         const imgCard = document.createElement("img");
         imgCard.className = "card-img-top";
@@ -35,8 +35,8 @@ window.addEventListener("DOMContentLoaded", () => {
         brand.className = "brand";
 
         const cardPrice = document.createElement("p");
-        cardPrice.innerText = singleObj.price;
-        cardPrice.className = "card-Price";
+        cardPrice.innerText = singleObj.price + "$";
+        cardPrice.className = "card-Price text-danger";
 
         const details = document.createElement("a");
         details.href = `./details.html?objectId=${singleObj._id}`;
