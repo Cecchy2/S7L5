@@ -32,17 +32,23 @@ window.addEventListener("DOMContentLoaded", () => {
 
         const brand = document.createElement("h5");
         brand.innerText = singleObj.brand;
-        brand.className = "btn btn-primary";
+        brand.className = "brand";
 
         const cardPrice = document.createElement("p");
         cardPrice.innerText = singleObj.price;
         cardPrice.className = "card-Price";
+
+        const details = document.createElement("a");
+        details.href = "./details.html";
+        details.innerText = "Details";
+        details.className = "btn btn-secondary";
 
         card.appendChild(imgCard);
         card.appendChild(cardTitle);
         card.appendChild(brand);
         card.appendChild(cardDescription);
         card.appendChild(cardPrice);
+        card.appendChild(details);
 
         row.appendChild(card);
       });

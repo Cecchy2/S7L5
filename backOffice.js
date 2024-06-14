@@ -1,22 +1,7 @@
 const authorization =
   "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjZiZjlhOTdjMjM5YzAwMTUyZjRiM2QiLCJpYXQiOjE3MTgzNTIyOTgsImV4cCI6MTcxOTU2MTg5OH0.y7gHg1PKQ4OQXp0Hab01t6w5m7V4aSUl2Lau-YghrEo";
-/* fetch("https://striveschool-api.herokuapp.com/api/product/", {
-    headers: {
-    "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjZiZjlhOTdjMjM5YzAwMTUyZjRiM2QiLCJpYXQiOjE3MTgzNTIyOTgsImV4cCI6MTcxOTU2MTg5OH0.y7gHg1PKQ4OQXp0Hab01t6w5m7V4aSUl2Lau-YghrEo"
-    }
-    }) */
+
 const URL = "https://striveschool-api.herokuapp.com/api/product/";
-
-/* class Pruduct {
-  constructor(name, description, brand, imageUrl, price) {
-    this.name = name;
-    this.description = description;
-    this.brand = brand;
-    this.imageUrl = imageUrl;
-    this.price = price;
-  }
-} */
-
 window.addEventListener("DOMContentLoaded", () => {
   const form = document.querySelector("form");
 
