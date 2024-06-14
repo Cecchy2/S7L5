@@ -1,4 +1,3 @@
-/* authorization key:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjZiZjlhOTdjMjM5YzAwMTUyZjRiM2QiLCJpYXQiOjE3MTgzNTIyOTgsImV4cCI6MTcxOTU2MTg5OH0.y7gHg1PKQ4OQXp0Hab01t6w5m7V4aSUl2Lau-YghrEo  */
 const authorization =
   "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjZiZjlhOTdjMjM5YzAwMTUyZjRiM2QiLCJpYXQiOjE3MTgzNTIyOTgsImV4cCI6MTcxOTU2MTg5OH0.y7gHg1PKQ4OQXp0Hab01t6w5m7V4aSUl2Lau-YghrEo";
 /* fetch("https://striveschool-api.herokuapp.com/api/product/", {
@@ -6,18 +5,9 @@ const authorization =
     "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjZiZjlhOTdjMjM5YzAwMTUyZjRiM2QiLCJpYXQiOjE3MTgzNTIyOTgsImV4cCI6MTcxOTU2MTg5OH0.y7gHg1PKQ4OQXp0Hab01t6w5m7V4aSUl2Lau-YghrEo"
     }
     }) */
-
-/* object-data: {
-        "name": "Nokia 3310",
-        "description": "Indestructible cellphone",
-        "brand": "Nokia",
-        "imageUrl": "https://example.com/3310.jpg",
-        "price": 99
-        }
- */
 const URL = "https://striveschool-api.herokuapp.com/api/product/";
 
-class Object {
+/* class Pruduct {
   constructor(name, description, brand, imageUrl, price) {
     this.name = name;
     this.description = description;
@@ -25,7 +15,7 @@ class Object {
     this.imageUrl = imageUrl;
     this.price = price;
   }
-}
+} */
 
 window.addEventListener("DOMContentLoaded", () => {
   const form = document.querySelector("form");
