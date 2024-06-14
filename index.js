@@ -43,12 +43,18 @@ window.addEventListener("DOMContentLoaded", () => {
         details.innerText = "Details";
         details.className = "btn btn-secondary";
 
+        const modifica = document.createElement("a");
+        modifica.href = `./backOffice.html?objectId=${singleObj._id}`;
+        modifica.innerText = "Modifica";
+        modifica.className = "btn btn-primary";
+
         card.appendChild(imgCard);
         card.appendChild(cardTitle);
         card.appendChild(brand);
         card.appendChild(cardDescription);
         card.appendChild(cardPrice);
         card.appendChild(details);
+        card.appendChild(modifica);
 
         row.appendChild(card);
       });
